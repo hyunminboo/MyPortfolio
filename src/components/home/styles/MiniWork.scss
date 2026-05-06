@@ -1,0 +1,145 @@
+.miniwork-section {
+  background: var(--bg2);
+}
+
+.inner.miniwork-inner {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+
+  .miniwork-layout {
+    display: grid;
+    grid-template-columns: 1fr 32rem;
+    gap: 6rem;
+    align-items: start;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .miniwork-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .mini-card {
+    background: var(--card-bg);
+    border: 1px solid var(--underline);
+    border-radius: 1.2rem;
+    padding: 2.4rem;
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: rgba(71, 255, 151, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .mini-icon {
+      width: 6rem;
+      height: 6rem;
+      object-fit: contain;
+      margin-bottom: 1.6rem;
+      display: block;
+    }
+
+    .mini-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    .mini-desc {
+      font-size: 1.2rem;
+      color: rgba(240, 240, 240, 0.5);
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+    }
+
+    .mini-tags {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.6rem;
+
+      span {
+        font-size: 1rem;
+        padding: 0.3rem 1rem;
+        border: 1px solid var(--underline);
+        border-radius: 0.3rem;
+        color: rgba(240, 240, 240, 0.5);
+        font-family: "Space Mono", monospace;
+      }
+    }
+
+    .mini-links {
+      display: flex;
+      gap: 0.8rem;
+
+      a {
+        font-size: 1.1rem;
+        font-family: "Space Mono", monospace;
+        padding: 0.4rem 1.2rem;
+        border-radius: 0.3rem;
+        background: var(--underline);
+        color: rgba(240, 240, 240, 0.7);
+        transition: all 0.2s;
+
+        &:hover {
+          background: var(--primary);
+          color: #0c0c0c;
+        }
+      }
+    }
+  }
+
+  .miniwork-aside {
+    position: sticky;
+    top: 10rem;
+
+    .section-label { margin-bottom: 2rem; }
+
+    .aside-title {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(3.6rem, 5vw, 6rem);
+      line-height: 1;
+      margin-bottom: 2rem;
+
+      .primary { color: var(--primary); }
+    }
+
+    .aside-desc {
+      font-size: 1.4rem;
+      color: rgba(240, 240, 240, 0.5);
+      line-height: 1.8;
+      margin-bottom: 3rem;
+    }
+
+    .aside-deco {
+      width: 18rem;
+      height: 18rem;
+      border: 1px solid rgba(71, 255, 151, 0.12);
+      border-radius: 50%;
+      position: relative;
+      margin-top: 4rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 12rem;
+        height: 12rem;
+        border: 1px solid rgba(71, 255, 151, 0.08);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

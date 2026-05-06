@@ -1,0 +1,154 @@
+.aboutme-section {
+  background: var(--bg);
+}
+
+.inner.aboutme-inner {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+
+  .section-header {
+    margin-bottom: 6rem;
+  }
+
+  .about-title {
+    font-size: clamp(5rem, 7vw, 10rem);
+    font-family: "Bebas Neue", sans-serif;
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+
+    .outline {
+      -webkit-text-stroke: 1px rgba(240, 240, 240, 0.25);
+      color: transparent;
+    }
+    .primary { color: var(--primary); }
+  }
+
+  /* 스킬 그리드 */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skill-category {
+    background: var(--card-bg);
+    border: 1px solid var(--underline);
+    border-radius: 1.2rem;
+    padding: 3rem;
+    transition: border-color 0.3s;
+
+    &:hover { border-color: rgba(71, 255, 151, 0.3); }
+
+    .cat-label {
+      font-family: "Space Mono", monospace;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 2.4rem;
+      display: block;
+    }
+
+    .skill-item {
+      margin-bottom: 2rem;
+
+      &:last-child { margin-bottom: 0; }
+
+      .skill-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.8rem;
+
+        .skill-name {
+          font-size: 1.3rem;
+          font-weight: 400;
+          color: rgba(240, 240, 240, 0.8);
+        }
+
+        .skill-pct {
+          font-family: "Space Mono", monospace;
+          font-size: 1rem;
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  /* 툴 태그 */
+  .tools-section {
+    margin-bottom: 6rem;
+
+    .tools-label {
+      font-family: "Space Mono", monospace;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(240, 240, 240, 0.4);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+
+      .tool-chip {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.6rem;
+        border: 1px solid var(--underline);
+        border-radius: 0.4rem;
+        color: rgba(240, 240, 240, 0.6);
+        font-family: "Space Mono", monospace;
+        transition: all 0.3s;
+
+        &:hover {
+          border-color: var(--primary);
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  /* 통계 */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    border-top: 1px solid var(--underline);
+    padding-top: 4rem;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+      text-align: center;
+
+      .stat-val {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4rem, 6vw, 7rem);
+        color: var(--primary);
+        line-height: 1;
+        display: block;
+      }
+
+      .stat-label {
+        font-family: "Space Mono", monospace;
+        font-size: 1rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(240, 240, 240, 0.4);
+        margin-top: 0.8rem;
+        display: block;
+      }
+    }
+  }
+}
