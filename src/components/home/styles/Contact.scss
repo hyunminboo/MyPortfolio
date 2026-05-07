@@ -14,24 +14,12 @@
     margin-bottom: 7rem;
 
     .contact-title {
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 900;
       font-size: clamp(5rem, 8vw, 12rem);
       line-height: 0.95;
-      letter-spacing: 0.01em;
+      letter-spacing: -0.03em;
       margin-top: 1.6rem;
-
-      .outline {
-        -webkit-text-stroke: 1px rgba(240, 240, 240, 0.25);
-        color: transparent;
-      }
-
-      span.star-spin {
-        display: inline-flex;
-        width: 0.85em;
-        height: 0.85em;
-
-        i.star { color: var(--primary); font-style: normal; }
-      }
     }
   }
 
@@ -77,7 +65,8 @@
         }
 
         .field {
-          input, textarea {
+          input,
+          textarea {
             width: 100%;
             font-size: 1.5rem;
             padding: 1.4rem 1.8rem;
@@ -89,113 +78,105 @@
             resize: none;
             font-family: "Noto Sans KR", sans-serif;
 
-            &::placeholder { color: rgba(240, 240, 240, 0.25); }
-
+            &::placeholder {
+              color: rgba(240, 240, 240, 0.25);
+            }
             &:focus {
               outline: none;
               border-color: rgba(71, 255, 151, 0.4);
             }
           }
-
-          textarea { min-height: 14rem; }
+          textarea {
+            min-height: 14rem;
+          }
         }
 
         &:last-child {
           margin-top: 1rem;
-
-          .field { display: flex; justify-content: flex-end; }
-        }
-      }
-    }
-  }
-
-  /* 연락처 정보 */
-  .contact-info-side {
-    h3 {
-      font-family: "Noto Sans KR", sans-serif;
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-bottom: 3rem;
-      color: rgba(240, 240, 240, 0.6);
-    }
-  }
-
-  .contact-lst {
-    display: flex;
-    flex-direction: column;
-
-    > li {
-      display: flex;
-      align-items: stretch;
-      padding: 2.4rem 0;
-      border-bottom: 1px dashed rgba(240, 240, 240, 0.1);
-      transition: all 0.3s;
-
-      &:first-child { border-top: 1px dashed rgba(240, 240, 240, 0.1); }
-
-      .item-label {
-        width: 10rem;
-        font-family: "Space Mono", monospace;
-        font-size: 1rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: rgba(240, 240, 240, 0.3);
-        padding-top: 0.2rem;
-        flex-shrink: 0;
-      }
-
-      .item-content {
-        flex: 1;
-
-        a {
-          display: block;
-          font-size: 1.5rem;
-          color: rgba(240, 240, 240, 0.75);
-          transition: color 0.3s;
-
-          &:hover { color: var(--primary); }
-        }
-
-        .hint {
-          font-size: 1.1rem;
-          color: rgba(240, 240, 240, 0.3);
-          margin-top: 0.6rem;
-        }
-      }
-    }
-
-    .channels-li {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-
-      .channels-label {
-        font-family: "Space Mono", monospace;
-        font-size: 1rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: rgba(240, 240, 240, 0.3);
-        margin-bottom: 1.6rem;
-      }
-
-      .contact-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-
-        a {
-          font-family: "Space Mono", monospace;
-          font-size: 1.2rem;
-          padding: 0.8rem 2rem;
-          border: 1px solid var(--underline);
-          border-radius: 0.4rem;
-          color: rgba(240, 240, 240, 0.6);
-          transition: all 0.3s;
-
-          &:hover {
-            border-color: var(--primary);
-            color: var(--primary);
+          .field {
+            display: flex;
+            justify-content: flex-end;
           }
         }
+      }
+    }
+  }
+
+  /* 다이아몬드 로고 */
+  .contact-info-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-diamond-outer {
+    width: 36rem;
+    height: 36rem;
+    border: 1px solid rgba(71, 255, 151, 0.15);
+    border-radius: 3rem;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+
+    @media screen and (max-width: 1024px) {
+      width: 28rem;
+      height: 28rem;
+    }
+  }
+
+  .logo-diamond-inner {
+    width: 28rem;
+    height: 28rem;
+    border-radius: 2.4rem;
+    background: linear-gradient(135deg, #0e2e1a 0%, #0a1f12 100%);
+    border: 1px solid rgba(71, 255, 151, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1024px) {
+      width: 22rem;
+      height: 22rem;
+    }
+  }
+
+  .logo-letters {
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: flex-end;
+    gap: 0.4rem;
+    line-height: 1;
+
+    .letter {
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 700;
+      display: block;
+
+      &.b {
+        font-size: 8rem;
+        color: rgba(71, 255, 151, 0.7);
+        order: 1;
+      }
+      &.h {
+        font-size: 5rem;
+        color: rgba(71, 255, 151, 0.25);
+        align-self: flex-start;
+        order: 2;
+      }
+      &.m {
+        font-size: 8rem;
+        color: rgba(71, 255, 151, 0.45);
+        order: 3;
       }
     }
   }

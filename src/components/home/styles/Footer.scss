@@ -55,7 +55,9 @@ footer {
         display: flex;
         align-items: center;
 
-        &:hover { color: var(--primary); }
+        &:hover {
+          color: var(--primary);
+        }
       }
     }
   }

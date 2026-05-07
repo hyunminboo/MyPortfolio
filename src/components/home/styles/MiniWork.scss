@@ -33,6 +33,7 @@
     border-radius: 1.2rem;
     padding: 2.4rem;
     transition: all 0.3s;
+    position: relative; // ← 추가
 
     &:hover {
       border-color: rgba(71, 255, 151, 0.3);
@@ -40,10 +41,12 @@
     }
 
     .mini-icon {
-      width: 6rem;
-      height: 6rem;
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+      top: 4rem;
+      right: 2.4rem;
       object-fit: contain;
-      margin-bottom: 1.6rem;
       display: block;
     }
 
@@ -53,6 +56,7 @@
       color: var(--text);
       margin-bottom: 0.8rem;
       font-family: "Noto Sans KR", sans-serif;
+      padding-right: 7rem; // ← 아이콘과 겹치지 않도록
     }
 
     .mini-desc {
@@ -103,7 +107,9 @@
     position: sticky;
     top: 10rem;
 
-    .section-label { margin-bottom: 2rem; }
+    .section-label {
+      margin-bottom: 2rem;
+    }
 
     .aside-title {
       font-family: "Bebas Neue", sans-serif;
@@ -111,7 +117,9 @@
       line-height: 1;
       margin-bottom: 2rem;
 
-      .primary { color: var(--primary); }
+      .primary {
+        color: var(--primary);
+      }
     }
 
     .aside-desc {
