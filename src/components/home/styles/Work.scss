@@ -19,7 +19,9 @@
     }
 
     .work-title-group {
-      .section-label { margin-bottom: 1.6rem; }
+      .section-label {
+        margin-bottom: 1.6rem;
+      }
 
       h2 {
         font-family: "Bebas Neue", sans-serif;
@@ -29,7 +31,7 @@
 
         .outline {
           -webkit-text-stroke: 1px rgba(240, 240, 240, 0.25);
-          color: transparent;
+          // color: transparent;
         }
       }
     }
@@ -79,8 +81,12 @@
         padding: 5rem;
         transition: all 0.4s;
 
-        @media screen and (max-width: 1200px) { padding: 3.2rem; }
-        @media screen and (max-width: 768px) { padding: 2.4rem; }
+        @media screen and (max-width: 1200px) {
+          padding: 3.2rem;
+        }
+        @media screen and (max-width: 768px) {
+          padding: 2.4rem;
+        }
 
         .work-num {
           font-family: "Space Mono", monospace;
@@ -156,7 +162,9 @@
         overflow: hidden;
         flex-shrink: 0;
 
-        @media screen and (max-width: 1200px) { width: 32rem; }
+        @media screen and (max-width: 1200px) {
+          width: 32rem;
+        }
         @media screen and (max-width: 900px) {
           width: 100%;
           height: 24rem;
@@ -176,7 +184,9 @@
 
       &:hover {
         .lst-t-wrap {
-          h4.lst-tit { color: var(--primary); }
+          h4.lst-tit {
+            color: var(--primary);
+          }
         }
         .lst-img-wrap .bg {
           transform: scale(1.04);
@@ -200,7 +210,10 @@
       padding-bottom: 0.2rem;
       transition: all 0.3s;
 
-      &:hover { color: var(--primary); border-color: var(--primary); }
+      &:hover {
+        color: var(--primary);
+        border-color: var(--primary);
+      }
     }
   }
 }
