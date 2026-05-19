@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./styles/AboutIntro.scss";
+import "./styles/Aboutintro.scss";
 
 const cards = [
   {
