@@ -1,0 +1,201 @@
+section {
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  overflow: hidden;
+
+  &#Work {
+    height: auto;
+  }
+
+  &#Contact {
+    height: 100vh;
+    @media screen and (max-width: 1200px) {
+      height: auto;
+      min-height: auto;
+      padding: clamp(10rem, 15vw, 20rem) 0;
+    }
+  }
+
+  &#Aboutme {
+    @media screen and (max-width: 1200px) {
+      height: auto;
+      min-height: auto;
+      padding: clamp(10rem, 15vw, 20rem) 0;
+    }
+  }
+  &#AboutIntro {
+    @media screen and (max-width: 1200px) {
+      height: auto;
+      min-height: auto;
+      padding: clamp(10rem, 15vw, 20rem) 0;
+    }
+  }
+}
+
+header,
+section {
+  .inner {
+    position: relative;
+    max-width: 140rem;
+    height: 100%;
+    margin: auto;
+
+    @media screen and (max-width: 1440px) {
+      padding: 1rem 4rem;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+/* 섹션 레이블 */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-family: "Space Mono", monospace;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background: var(--primary);
+  }
+}
+
+/* 버튼 공통 */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--primary);
+  color: #0c0c0c;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.4rem;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--primary200);
+    transform: translateY(-2px);
+  }
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: transparent;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 1.1rem 2.4rem;
+  border-radius: 0.4rem;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--underline);
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}
+
+/* 스타 스핀 애니메이션 */
+span.star-spin {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  height: 1em;
+  transform-origin: 50% 50%;
+  animation: rotate 4s linear infinite;
+  position: relative;
+
+  i.star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-style: normal;
+    color: var(--primary);
+  }
+}
+
+/* 스킬바 */
+.skill-bar {
+  position: relative;
+  height: 4px;
+  background: var(--underline);
+  border-radius: 2px;
+  overflow: hidden;
+
+  .fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1rem);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 장식 원형 */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}

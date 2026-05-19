@@ -1,0 +1,64 @@
+footer {
+  background: var(--bg);
+  border-top: 1px solid rgba(71, 255, 151, 0.06);
+
+  .inner {
+    padding: 5rem 4rem !important;
+    max-width: 140rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 3rem;
+      padding: 4rem 2rem !important;
+      text-align: center;
+    }
+
+    .left {
+      .footer-logo {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1em;
+        color: var(--gray900);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.8rem;
+
+        .dot {
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background: var(--primary);
+          display: inline-block;
+        }
+      }
+
+      .copy {
+        font-size: 1.2rem;
+        color: var(--gray300);
+        font-family: "Space Mono", monospace;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      a {
+        color: var(--gray400);
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

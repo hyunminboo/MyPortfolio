@@ -1,0 +1,67 @@
+/* 공통 Neutral Gray 팔레트 */
+$neutral: (
+  100: #f7f7f7,
+  200: #e5e5e5,
+  300: #d4d4d4,
+  400: #b3b3b3,
+  500: #8f8f8f,
+  600: #6a6a6a,
+  700: #4d4d4d,
+  800: #2e2e2e,
+  900: #1a1a1a
+);
+
+$light: (
+  bg: #fcfcfc,
+  bg2: #f2f2f2,
+  text: #0f0f0f,
+  primary: #059669,
+  primary200: #047857,
+  primary-dark: #064e3b,
+  underline:#d8d8d8,
+  card-bg: #f0f0f0,
+  gray100: #f7f7f7,
+  gray200: #e5e5e5,
+  gray300: #777777,
+  gray400: #555555,
+  gray500: #333333,
+  gray600: #222222,
+  gray700: #111111,
+  gray800: #0a0a0a,
+  gray900: #000000
+);
+
+$dark: (
+  bg: #0c0c0c,
+  bg2: #111111,
+  text: #f0f0f0,
+  primary: #47FF97,
+  primary200: #25d873,
+  primary-dark: #0a2e1a,
+  underline:#1e1e1e,
+  card-bg: #141414,
+  gray900: #f7f7f7,
+  gray800: #e5e5e5,
+  gray700: #d4d4d4,
+  gray600: #b3b3b3,
+  gray500: #8f8f8f,
+  gray400: #6a6a6a,
+  gray300: #4d4d4d,
+  gray200: #2e2e2e,
+  gray100: #1a1a1a
+);
+
+:root {
+  @each $k, $v in $neutral {
+    --neutral-#{$k}: #{$v};
+  }
+  @each $k, $v in $light {
+    --#{$k}: #{$v};
+  }
+}
+
+[data-theme="dark"] {
+  @each $k, $v in $dark {
+    --#{$k}: #{$v};
+  }
+}
