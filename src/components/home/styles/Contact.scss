@@ -41,7 +41,7 @@
       font-size: 1.6rem;
       font-weight: 500;
       margin-bottom: 3rem;
-      color: rgba(240, 240, 240, 0.6);
+      color: var(--gray600);
     }
   }
 
@@ -60,7 +60,7 @@
           font-size: 1.2rem;
           font-family: "Space Mono", monospace;
           letter-spacing: 0.1em;
-          color: rgba(240, 240, 240, 0.5);
+          color: var(--gray500);
           text-transform: uppercase;
         }
 
@@ -79,7 +79,7 @@
             font-family: "Noto Sans KR", sans-serif;
 
             &::placeholder {
-              color: rgba(240, 240, 240, 0.25);
+              color: var(--gray300);
             }
             &:focus {
               outline: none;

@@ -32,7 +32,7 @@ const Aboutme = () => {
           <span className="outline">Tech</span>{' '}
           <span>Stack</span>
         </h2>
-        <p style={{ marginTop: '1.6rem', fontSize: '1.4rem', color: 'rgba(240,240,240,0.5)', maxWidth: '50rem' }}>
+        <p style={{ marginTop: '1.6rem', fontSize: '1.4rem', color: 'var(--gray600)', maxWidth: '50rem' }}>
           실무에서 다양한 프로젝트를 진행하며 다음과 같은 기술 스택을 주로 활용합니다.
           프론트엔드와 백엔드를 아우르는 풀스택 개발을 지향합니다.
         </p>

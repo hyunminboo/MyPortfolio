@@ -43,7 +43,7 @@ const AboutIntro = () => {
   return (
     <div className="inner aboutintro-inner" ref={sectionRef}>
       <div className="ai-header">
-        <span className="section-label">01. ABOUT ME</span>
+        <span className="section-label">ABOUT ME</span>
         <h2 className="ai-title">저에 대해서</h2>
       </div>
 

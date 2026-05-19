@@ -17,13 +17,14 @@ const MiniWork = () => {
               </div>
               <div className="mini-links">
                 <a href={work.links.github}>GitHub</a>
-                <a href={work.links.demo}>Demo</a>
+                <a href={work.links.demo}>Vercel</a>
               </div>
             </div>
           ))}
         </div>
 
         <div className="miniwork-aside">
+          <div className="aside-deco"></div>
           <div className="section-label">MY PROJECTS</div>
           <h2 className="aside-title">
             미니<br />
@@ -34,7 +35,6 @@ const MiniWork = () => {
             꾸준히, 작은 것부터 실력을 쌓아왔습니다.
           </p>
           <button className="btn-primary">포트폴리오 보러가기</button>
-          <div className="aside-deco"></div>
         </div>
       </div>
     </div>

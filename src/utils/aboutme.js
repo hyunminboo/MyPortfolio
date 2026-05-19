@@ -1,9 +1,9 @@
 const aboutMe = {
   basic: {
     name: "부현민",
-    age: 27,
-    location: "서울, 대한민국",
-    mbti: "ENFJ",
+    age: 24,
+    location: "경기도, 대한민국",
+    mbti: "",
     email: "buhyunmin@gmail.com",
   },
   intro: "안녕하세요, 저는 풀스택 개발자 부현민입니다. 프론트엔드부터 백엔드까지, 사용자 경험을 최우선으로 생각하며 완성도 높은 웹 서비스를 만들어갑니다. 항상 새로운 기술을 학습하고 도전하는 것을 즐깁니다.",
@@ -17,7 +17,7 @@ const aboutMe = {
     backend: [
       { name: "Node.js / Express", level: 80 },
       { name: "Python / Django", level: 65 },
-      { name: "MongoDB", level: 75 },
+      { name: "OracleDB", level: 75 },
       { name: "MySQL / PostgreSQL", level: 70 },
     ],
     devops: [
@@ -27,7 +27,7 @@ const aboutMe = {
       { name: "CI/CD", level: 58 },
     ],
   },
-  tools: ["Git", "Figma", "VS Code", "Postman", "Insomnia", "Slack", "Linux"],
+  tools: ["Git", "Figma", "VS Code", "Postman", "Insomnia", "Notion"],
   stats: [
     { value: "3+", label: "Years Experience" },
     { value: "20+", label: "Projects done" },

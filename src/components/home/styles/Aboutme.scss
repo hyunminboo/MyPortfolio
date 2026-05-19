@@ -17,7 +17,7 @@
     letter-spacing: 0.01em;
 
     .outline {
-      -webkit-text-stroke: 1px rgba(240, 240, 240, 0.25);
+      -webkit-text-stroke: 1px var(--gray300);
       color: transparent;
     }
     .primary { color: var(--primary); }
@@ -68,7 +68,7 @@
         .skill-name {
           font-size: 1.3rem;
           font-weight: 400;
-          color: rgba(240, 240, 240, 0.8);
+          color: var(--gray800);
         }
 
         .skill-pct {
@@ -89,7 +89,7 @@
       font-size: 1rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(240, 240, 240, 0.4);
+      color: var(--gray400);
       text-align: center;
       margin-bottom: 2rem;
     }
@@ -105,7 +105,7 @@
         padding: 0.6rem 1.6rem;
         border: 1px solid var(--underline);
         border-radius: 0.4rem;
-        color: rgba(240, 240, 240, 0.6);
+        color: var(--gray600);
         font-family: "Space Mono", monospace;
         transition: all 0.3s;
 
@@ -145,7 +145,7 @@
         font-size: 1rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-        color: rgba(240, 240, 240, 0.4);
+        color: var(--gray400);
         margin-top: 0.8rem;
         display: block;
       }

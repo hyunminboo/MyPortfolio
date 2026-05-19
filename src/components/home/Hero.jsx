@@ -4,27 +4,30 @@ import { Canvas } from "@react-three/fiber";
 import Box from "../animation/Box";
 import GatsbyStars from "../animation/GatsbyStars";
 import useSmoothScroll from "../../hook/useSmoothScroll";
+import { useTheme } from "../../context/ThemeContext";
 
 const Hero = () => {
   const scrollTo = useSmoothScroll();
 
   return (
-    <div className="hero">
+    <div className="hero" data-theme="dark">
       {/* 3D 배경 Canvas */}
       <Canvas className="canvas" camera={{ position: [0, 0, 5], fov: 65 }}>
-        <color attach="background" args={["#000000"]} />
         <GatsbyStars />
         <ambientLight intensity={0.7} />
         <pointLight position={[10, 10, 10]} intensity={1.5} />
         <Box position={[3.1, 0.4, 0]} scale={0.75} />
       </Canvas>
 
-      <div className="inner hero-inner">
-        {/* 배경 장식 */}
+      {/* 배경 장식 */}
+      <div className="hero-bg-circles">
         <div className="hero-bg-circle c1"></div>
         <div className="hero-bg-circle c2"></div>
         <div className="hero-bg-circle outline1"></div>
         <div className="hero-bg-circle outline2"></div>
+      </div>
+
+      <div className="inner hero-inner">
 
         <p className="hero-sub">안녕하세요, 저는</p>
         <h1 className="tit">
