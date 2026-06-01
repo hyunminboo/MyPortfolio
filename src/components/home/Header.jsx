@@ -57,7 +57,7 @@ const Header = () => {
             <span>2</span>
             <span>3</span>
           </button>
-          <Nav />
+          <Nav closeMenu={() => setMenuOpen(false)} />
           <button
             type="button"
             className={`theme-btn ${isDark ? "dark" : ""}`}

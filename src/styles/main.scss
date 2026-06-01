@@ -94,7 +94,11 @@ input, button, textarea, select {
 
   &:hover {
     background: var(--primary);
-    color: #0c0c0c;
+    color: var(--bg);
     border-color: var(--primary);
+  }
+
+  html:not([data-theme="dark"]) & {
+    border-color: rgba(37, 99, 235, 0.4);
   }
 }

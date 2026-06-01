@@ -3,20 +3,26 @@ import "./styles/Hero.scss";
 import { Canvas } from "@react-three/fiber";
 import Box from "../animation/Box";
 import GatsbyStars from "../animation/GatsbyStars";
+import SunWireframe from "../animation/SunWireframe";
 import useSmoothScroll from "../../hook/useSmoothScroll";
 import { useTheme } from "../../context/ThemeContext";
 
 const Hero = () => {
   const scrollTo = useSmoothScroll();
+  const { theme } = useTheme();
 
   return (
-    <div className="hero" data-theme="dark">
+    <div className={`hero ${theme === 'light' ? 'hero-light' : ''}`} data-theme={theme || "dark"}>
       {/* 3D 배경 Canvas */}
       <Canvas className="canvas" camera={{ position: [0, 0, 5], fov: 65 }}>
-        <GatsbyStars />
+        {theme === 'dark' && <GatsbyStars />}
         <ambientLight intensity={0.7} />
         <pointLight position={[10, 10, 10]} intensity={1.5} />
-        <Box position={[3.1, 0.4, 0]} scale={0.75} />
+        {theme === 'dark' ? (
+          <Box position={[3.1, 0.4, 0]} scale={0.75} />
+        ) : (
+          <SunWireframe position={[3.1, 0.4, 0]} scale={0.75} />
+        )}
       </Canvas>
 
       {/* 배경 장식 */}
