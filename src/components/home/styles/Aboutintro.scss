@@ -203,3 +203,23 @@
     }
   }
 }
+
+html:not([data-theme="dark"]) {
+  .aboutintro-inner {
+    .ai-card:hover {
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+    .logo-diamond {
+      background: rgba(219, 234, 254, 0.55); // blue-100
+      border-color: rgba(37, 99, 235, 0.18);
+      &::before {
+        border-color: rgba(37, 99, 235, 0.22);
+      }
+    }
+    .logo-letters .letter {
+      &.b { color: rgba(37, 99, 235, 0.75); }
+      &.h { color: rgba(37, 99, 235, 0.28); }
+      &.m { color: rgba(37, 99, 235, 0.65); }
+    }
+  }
+}

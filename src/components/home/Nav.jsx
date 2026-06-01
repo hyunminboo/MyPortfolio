@@ -8,7 +8,7 @@ const navLinks = [
   { id: 'Work', label: '연락' },
 ]
 
-const Nav = () => {
+const Nav = ({ closeMenu }) => {
   const scrollTo = useSmoothScroll()
   return (
     <nav>
@@ -19,6 +19,7 @@ const Nav = () => {
               onClick={(e) => {
                 e.preventDefault()
                 scrollTo(nav.id)
+                if (closeMenu) closeMenu()
               }}
               href={`#${nav.id}`}
             >

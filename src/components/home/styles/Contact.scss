@@ -181,3 +181,25 @@
     }
   }
 }
+
+html:not([data-theme="dark"]) {
+  .contact-inner {
+    .contact-form ul li .field {
+      input:focus, textarea:focus {
+        border-color: rgba(37, 99, 235, 0.4);
+      }
+    }
+    .logo-diamond-outer {
+      border-color: rgba(37, 99, 235, 0.15);
+    }
+    .logo-diamond-inner {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border-color: rgba(37, 99, 235, 0.12);
+    }
+    .logo-letters .letter {
+      &.b { color: rgba(37, 99, 235, 0.7); }
+      &.h { color: rgba(37, 99, 235, 0.25); }
+      &.m { color: rgba(37, 99, 235, 0.45); }
+    }
+  }
+}
