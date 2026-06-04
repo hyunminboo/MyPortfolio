@@ -1,10 +1,13 @@
 import React from "react";
 import works from "../../utils/works";
 import "./styles/Work.scss";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { SiNotion } from "react-icons/si";
 import { Canvas } from "@react-three/fiber"
 import { useTheme } from "../../context/ThemeContext"
 import SunAnimation from "../animation/SunAnimation"
 import GatsbyStars from "../animation/GatsbyStars"
+import { getTechIcon } from "../../utils/getTechIcon"
 
 const Work = () => {
   const { theme } = useTheme();
@@ -52,19 +55,46 @@ const Work = () => {
               <p className="lst-dsc">{work.description}</p>
               <div className="tags">
                 {work.tags.map((t, i) => (
-                  <span key={i}>{t}</span>
+                  <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                    {getTechIcon(t)}
+                    {t}
+                  </span>
                 ))}
               </div>
               <div className="work-links">
-                <a
-                  href={work.links.notion}
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Notion ↗
-                </a>
-                <a href={work.links.demo} onClick={(e) => e.stopPropagation()}>
-                  Live Demo ↗
-                </a>
+                {work.links.github && work.links.github !== "#" && (
+                  <a
+                    href={work.links.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="link-btn"
+                  >
+                    <FaGithub size={18} /> GitHub
+                  </a>
+                )}
+                {work.links.notion && work.links.notion !== "#" && (
+                  <a
+                    href={work.links.notion}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="link-btn"
+                  >
+                    <SiNotion size={18} /> Notion
+                  </a>
+                )}
+                {work.links.demo && work.links.demo !== "#" && (
+                  <a 
+                    href={work.links.demo} 
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="link-btn"
+                  >
+                    <FaExternalLinkAlt size={16} /> Live Demo
+                  </a>
+                )}
               </div>
             </div>{" "}
             {/* a → div */}

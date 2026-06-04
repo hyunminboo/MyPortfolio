@@ -5,6 +5,9 @@ import { Canvas } from "@react-three/fiber"
 import { useTheme } from "../../context/ThemeContext"
 import SunAnimation from "../animation/SunAnimation"
 import GatsbyStars from "../animation/GatsbyStars"
+import { SiNotion } from "react-icons/si"
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
+import { getTechIcon } from "../../utils/getTechIcon"
 
 const MiniWork = () => {
   const { theme } = useTheme();
@@ -39,7 +42,12 @@ const MiniWork = () => {
               <h4 className="mini-title">{work.title}</h4>
               <p className="mini-desc">{work.description}</p>
               <div className="mini-tags">
-                {work.tags.map((t, i) => <span key={i}>{t}</span>)}
+                {work.tags.map((t, i) => (
+                  <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                    {getTechIcon(t)}
+                    {t}
+                  </span>
+                ))}
               </div>
               <div className="mini-links">
                 {work.links.github && work.links.github !== "#" && (
@@ -49,7 +57,17 @@ const MiniWork = () => {
                     rel="noreferrer" 
                     onClick={(e) => e.stopPropagation()}
                   >
-                    GitHub
+                    <FaGithub size={14} /> GitHub
+                  </a>
+                )}
+                {work.links.notion && work.links.notion !== "#" && (
+                  <a 
+                    href={work.links.notion} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <SiNotion size={14} /> Notion
                   </a>
                 )}
                 {work.links.demo && work.links.demo !== "#" && (
@@ -59,7 +77,7 @@ const MiniWork = () => {
                     rel="noreferrer" 
                     onClick={(e) => e.stopPropagation()}
                   >
-                    Demo
+                    <FaExternalLinkAlt size={12} /> Demo
                   </a>
                 )}
               </div>
@@ -77,7 +95,9 @@ const MiniWork = () => {
             학습과 연습 목적으로 만든 소규모 프로젝트들입니다.<br />
             꾸준히, 작은 것부터 실력을 쌓아왔습니다.
           </p>
-          <button className="btn-primary">미니 프로젝트 보러가기</button>
+          <button className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
+            <SiNotion size={18} /> 미니 프로젝트 보러가기
+          </button>
         </div>
       </div>
       </div>

@@ -128,6 +128,9 @@
         background: var(--underline);
         color: var(--gray700);
         transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
 
         &:hover {
           background: var(--primary);

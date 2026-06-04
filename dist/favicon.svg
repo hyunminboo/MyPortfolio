@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <g transform="translate(50, 50) rotate(45)">
+    <rect x="-36" y="-36" width="72" height="72" rx="8" fill="#ffffff" stroke="#82b1ff" stroke-width="1.5"/>
+  </g>
+  <text font-family="system-ui, -apple-system, sans-serif" font-weight="900" fill="#82b1ff" text-anchor="middle">
+    <tspan x="34" y="58" font-size="28">B</tspan>
+    <tspan x="50" y="44" font-size="18">H</tspan>
+    <tspan x="66" y="58" font-size="28">M</tspan>
+  </text>
+</svg>

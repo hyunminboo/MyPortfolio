@@ -10,9 +10,9 @@ const aboutMe = {
   skills: {
     frontend: [
       { name: "React", level: 90 },
-      { name: "TypeScript", level: 82 },
-      { name: "Vue.js", level: 70 },
-      { name: "SCSS / Tailwind", level: 88 },
+      { name: "Three.js / R3F", level: 85 },
+      { name: "JavaScript", level: 88 },
+      { name: "SCSS", level: 90 },
     ],
     backend: [
       { name: "Node.js", level: 80 },
@@ -24,10 +24,10 @@ const aboutMe = {
       { name: "Git / GitHub", level: 88 },
       { name: "Docker", level: 60 },
       { name: "AWS / Cloudtype", level: 65 },
-      { name: "CI/CD", level: 58 },
+      { name: "IWIN Server / Domain", level: 58 },
     ],
   },
-  tools: ["Git", "Figma", "VS Code", "Postman", "Insomnia", "Notion"],
+  tools: ["Git", "Figma", "VS Code", "Postman", "Docker", "Notion"],
   stats: [
     { value: "3+", label: "Years Experience" },
     { value: "20+", label: "Projects done" },

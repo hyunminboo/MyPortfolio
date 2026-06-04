@@ -145,24 +145,39 @@
 
         .work-links {
           display: flex;
-          gap: 1rem;
-          margin-top: 2.4rem;
+          gap: 1.2rem;
+          margin-top: 3rem;
 
-          a {
+          .link-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            font-size: 1.2rem;
-            font-family: "Space Mono", monospace;
-            color: var(--gray500);
-            padding: 0.6rem 1.4rem;
-            border: 1px solid var(--underline);
-            border-radius: 0.4rem;
-            transition: all 0.3s;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding-bottom: 0.2rem;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0%;
+              height: 1px;
+              background: var(--primary);
+              transition: width 0.3s ease;
+            }
 
             &:hover {
-              border-color: var(--primary);
               color: var(--primary);
+              transform: translateY(-2px);
+              &::after {
+                width: 100%;
+              }
             }
           }
         }

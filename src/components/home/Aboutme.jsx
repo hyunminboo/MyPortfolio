@@ -3,6 +3,7 @@ import "./styles/Aboutme.scss"
 import aboutMe from '../../utils/aboutme'
 import { Canvas } from "@react-three/fiber"
 import { useTheme } from "../../context/ThemeContext"
+import { getTechIcon } from "../../utils/getTechIcon"
 import SunAnimation from "../animation/SunAnimation"
 import GatsbyStars from "../animation/GatsbyStars"
 
@@ -60,7 +61,10 @@ const Aboutme = () => {
           {skills.frontend.map((s, i) => (
             <div className="skill-item" key={i}>
               <div className="skill-info">
-                <span className="skill-name">{s.name}</span>
+                <span className="skill-name" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem' }}>
+                  {getTechIcon(s.name)}
+                  {s.name}
+                </span>
                 <span className="skill-pct">{s.level}%</span>
               </div>
               <div className="skill-bar">
@@ -76,7 +80,10 @@ const Aboutme = () => {
           {skills.backend.map((s, i) => (
             <div className="skill-item" key={i}>
               <div className="skill-info">
-                <span className="skill-name">{s.name}</span>
+                <span className="skill-name" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem' }}>
+                  {getTechIcon(s.name)}
+                  {s.name}
+                </span>
                 <span className="skill-pct">{s.level}%</span>
               </div>
               <div className="skill-bar">
@@ -92,7 +99,10 @@ const Aboutme = () => {
           {skills.devops.map((s, i) => (
             <div className="skill-item" key={i}>
               <div className="skill-info">
-                <span className="skill-name">{s.name}</span>
+                <span className="skill-name" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem' }}>
+                  {getTechIcon(s.name)}
+                  {s.name}
+                </span>
                 <span className="skill-pct">{s.level}%</span>
               </div>
               <div className="skill-bar">
@@ -108,7 +118,10 @@ const Aboutme = () => {
         <p className="tools-label">Tools &amp; Etc</p>
         <div className="tools-list">
           {tools.map((t, i) => (
-            <span className="tool-chip" key={i}>{t}</span>
+            <span className="tool-chip" key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem' }}>
+              {getTechIcon(t)}
+              {t}
+            </span>
           ))}
         </div>
       </div>
