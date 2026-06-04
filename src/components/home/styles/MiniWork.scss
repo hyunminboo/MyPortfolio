@@ -150,8 +150,9 @@
       line-height: 1;
       margin-bottom: 2rem;
 
-      .primary {
-        color: var(--primary);
+      .outline {
+        -webkit-text-stroke: 1px var(--gray300);
+        color: transparent;
       }
     }
 

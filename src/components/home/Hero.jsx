@@ -3,7 +3,7 @@ import "./styles/Hero.scss";
 import { Canvas } from "@react-three/fiber";
 import Box from "../animation/Box";
 import GatsbyStars from "../animation/GatsbyStars";
-import SunWireframe from "../animation/SunWireframe";
+import SunAnimation from "../animation/SunAnimation";
 import useSmoothScroll from "../../hook/useSmoothScroll";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -21,7 +21,7 @@ const Hero = () => {
         {theme === 'dark' ? (
           <Box position={[3.1, 0.4, 0]} scale={0.75} />
         ) : (
-          <SunWireframe position={[3.1, 0.4, 0]} scale={0.75} />
+          <SunAnimation position={[3.1, 0.4, 0]} scale={0.75} />
         )}
       </Canvas>
 

@@ -33,6 +33,14 @@ export const miniWorks = [
     tags: ["React", "API"],
     links: { github: "#", demo: "#" },
   },
+  {
+    id: "m-005",
+    icon: img("mini-api.png"),
+    title: "파이썬 미니 프로젝트",
+    description: "파이썬을 활용한 미니 프로젝트입니다.",
+    tags: ["Python"],
+    links: { notion: "https://app.notion.com/p/372e37e5595f80f090d9c06a6e52da82?source=copy_link" },
+  },
 ];
 
 const works = [
@@ -42,7 +50,7 @@ const works = [
     description: "react와 springboot기반 여행 아카이브 사이트입니다. 사용자가 여행지를 등록하고 사진을 업로드할 수 있습니다.",
     tags: ["React", "Springboot"],
     thumbnail: img("p-1.png"), 
-    links: { notion: "#", demo: "https://triparchive.o-r.kr/" },
+    links: { notion: "https://app.notion.com/p/fullstack-32fe37e5595f80dc8a7bd31380f65460?source=copy_link", demo: "https://triparchive.o-r.kr/" },
   },
   {
     id: "w-001",
