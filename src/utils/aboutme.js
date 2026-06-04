@@ -9,16 +9,16 @@ const aboutMe = {
   intro: "안녕하세요, 저는 풀스택 개발자 부현민입니다. 프론트엔드부터 백엔드까지, 사용자 경험을 최우선으로 생각하며 완성도 높은 웹 서비스를 만들어갑니다. 항상 새로운 기술을 학습하고 도전하는 것을 즐깁니다.",
   skills: {
     frontend: [
-      { name: "React / Next.js", level: 90 },
+      { name: "React", level: 90 },
       { name: "TypeScript", level: 82 },
       { name: "Vue.js", level: 70 },
       { name: "SCSS / Tailwind", level: 88 },
     ],
     backend: [
-      { name: "Node.js / Express", level: 80 },
-      { name: "Python / Django", level: 65 },
+      { name: "Node.js", level: 80 },
+      { name: "Python", level: 65 },
       { name: "OracleDB", level: 75 },
-      { name: "MySQL / PostgreSQL", level: 70 },
+      { name: "MySQL / MongoDB", level: 70 },
     ],
     devops: [
       { name: "Git / GitHub", level: 88 },
