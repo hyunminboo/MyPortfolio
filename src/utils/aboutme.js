@@ -16,7 +16,7 @@ const aboutMe = {
     ],
     backend: [
       { name: "Node.js", level: 80 },
-      { name: "Python", level: 65 },
+      { name: "Java / Python", level: 75 },
       { name: "OracleDB", level: 75 },
       { name: "MySQL / MongoDB", level: 70 },
     ],

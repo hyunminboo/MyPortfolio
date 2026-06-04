@@ -95,7 +95,11 @@ const MiniWork = () => {
             학습과 연습 목적으로 만든 소규모 프로젝트들입니다.<br />
             꾸준히, 작은 것부터 실력을 쌓아왔습니다.
           </p>
-          <button className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
+          <button 
+            className="btn-primary" 
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}
+            onClick={() => window.open('https://app.notion.com/p/375e37e5595f80dfaf80e0bcde2c0e9e?source=copy_link', '_blank')}
+          >
             <SiNotion size={18} /> 미니 프로젝트 보러가기
           </button>
         </div>
