@@ -14,11 +14,15 @@
     margin-bottom: 7rem;
 
     .contact-title {
-      font-family: "Noto Sans KR", sans-serif;
-      font-weight: 900;
-      font-size: clamp(5rem, 8vw, 12rem);
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5rem, 7vw, 10rem);
       line-height: 0.95;
-      letter-spacing: -0.03em;
+      letter-spacing: 0.01em;
+
+      .outline {
+        -webkit-text-stroke: 1px var(--gray300);
+        color: transparent;
+      }
       margin-top: 1.6rem;
     }
   }

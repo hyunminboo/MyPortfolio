@@ -28,16 +28,19 @@
   }
 
   .mini-card {
-    background: var(--card-bg);
+    background: color-mix(in srgb, var(--card-bg) 65%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--underline);
-    border-radius: 1.2rem;
-    padding: 2.4rem;
-    transition: all 0.3s;
+    border-radius: 1.6rem;
+    padding: 2.8rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative; // ← 추가
 
     &:hover {
-      border-color: rgba(71, 255, 151, 0.3);
-      transform: translateY(-4px);
+      border-color: var(--primary);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px color-mix(in srgb, var(--primary) 15%, transparent);
     }
 
     .mini-icon {

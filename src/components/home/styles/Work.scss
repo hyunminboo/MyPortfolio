@@ -31,7 +31,7 @@
 
         .outline {
           -webkit-text-stroke: 1px var(--gray300);
-          // color: transparent;
+          color: transparent;
         }
       }
     }
@@ -57,17 +57,19 @@
   .work-lst {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    background: var(--underline);
-    border: 1px solid var(--underline);
-    border-radius: 1.2rem;
-    overflow: hidden;
+    gap: 3.2rem;
+    overflow: visible;
 
     > li {
-      background-color: var(--card-bg);
+      background: color-mix(in srgb, var(--card-bg) 65%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--underline);
+      border-radius: 1.6rem;
       display: flex;
       align-items: stretch;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
 
       @media screen and (max-width: 900px) {
         flex-direction: column;
@@ -183,6 +185,10 @@
       }
 
       &:hover {
+        border-color: var(--primary);
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px color-mix(in srgb, var(--primary) 15%, transparent);
+
         .lst-t-wrap {
           h4.lst-tit {
             color: var(--primary);

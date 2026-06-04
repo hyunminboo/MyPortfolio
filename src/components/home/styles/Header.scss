@@ -14,9 +14,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 2.4rem !important;
-    // background: rgba(20, 20, 20, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--underline);
     border-radius: 10rem;
     max-width: 140rem;

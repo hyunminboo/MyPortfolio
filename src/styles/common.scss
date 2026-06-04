@@ -90,7 +90,8 @@ section {
 
   &:hover {
     background: var(--primary200);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px color-mix(in srgb, var(--primary) 30%, transparent);
   }
 }
 
@@ -105,13 +106,16 @@ section {
   padding: 1.1rem 2.4rem;
   border-radius: 0.4rem;
   letter-spacing: 0.05em;
-  border: 1px solid var(--underline);
+  border: 1px solid color-mix(in srgb, var(--text) 25%, transparent);
   transition: all 0.3s;
   cursor: pointer;
 
   &:hover {
     border-color: var(--primary);
-    color: var(--primary);
+    background: var(--primary);
+    color: var(--btn-text);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px color-mix(in srgb, var(--primary) 20%, transparent);
   }
 }
 

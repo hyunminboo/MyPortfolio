@@ -36,13 +36,19 @@
   }
 
   .skill-category {
-    background: var(--card-bg);
+    background: color-mix(in srgb, var(--card-bg) 65%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--underline);
-    border-radius: 1.2rem;
-    padding: 3rem;
-    transition: border-color 0.3s;
+    border-radius: 1.6rem;
+    padding: 3.2rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-    &:hover { border-color: rgba(71, 255, 151, 0.3); }
+    &:hover {
+      border-color: var(--primary);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px color-mix(in srgb, var(--primary) 15%, transparent);
+    }
 
     .cat-label {
       font-family: "Space Mono", monospace;
@@ -102,16 +108,22 @@
 
       .tool-chip {
         font-size: 1.2rem;
-        padding: 0.6rem 1.6rem;
+        padding: 0.8rem 1.8rem;
         border: 1px solid var(--underline);
-        border-radius: 0.4rem;
+        border-radius: 2rem;
+        background: color-mix(in srgb, var(--card-bg) 60%, transparent);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         color: var(--gray600);
         font-family: "Space Mono", monospace;
-        transition: all 0.3s;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
         &:hover {
           border-color: var(--primary);
-          color: var(--primary);
+          color: var(--btn-text);
+          background: var(--primary);
+          transform: translateY(-3px);
+          box-shadow: 0 8px 16px color-mix(in srgb, var(--primary) 20%, transparent);
         }
       }
     }

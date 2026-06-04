@@ -42,7 +42,7 @@ const works = [
     description: "react와 springboot기반 여행 아카이브 사이트입니다. 사용자가 여행지를 등록하고 사진을 업로드할 수 있습니다.",
     tags: ["React", "Springboot"],
     thumbnail: img("p-1.png"), 
-    links: { notion: "#", demo: "#" },
+    links: { notion: "#", demo: "https://triparchive.o-r.kr/" },
   },
   {
     id: "w-001",

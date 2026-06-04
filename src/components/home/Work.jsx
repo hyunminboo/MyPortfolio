@@ -9,14 +9,14 @@ const Work = () => {
         <div className="work-title-group">
           <div className="section-label">MY PROJECTS</div>
           <h2>
-            <span className="outline">프로</span>젝트
+            <span className="outline">CORE</span> PROJECTS
           </h2>
 
           <div className="work-header-desc">
             <p>
-              직접 기획하고 개발한 주요 프로젝트입니다.
+              설계부터 배포까지 깊이 관여한 규모 있는 핵심 프로젝트들입니다.
               <br />
-              프론트엔드부터 배포까지 다양한 경험을 담았습니다.
+              복잡한 문제 해결과 성능 최적화에 대한 고민을 담았습니다.
             </p>
           </div>
         </div>

@@ -22,7 +22,9 @@ const Contact = () => {
     <div className="inner contact-inner">
       <div className="contact-header">
         <div className="section-label">GET IN TOUCH</div>
-        <h1 className="contact-title">연락하기</h1>
+        <h2 className="contact-title">
+          <span className="outline">CONTACT</span> ME
+        </h2>
       </div>
 
       <div className="contact-wrapper">
