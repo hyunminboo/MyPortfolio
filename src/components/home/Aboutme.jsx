@@ -1,9 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 import "./styles/Aboutme.scss"
 import aboutMe from '../../utils/aboutme'
+import { Canvas } from "@react-three/fiber"
+import { useTheme } from "../../context/ThemeContext"
+import SunAnimation from "../animation/SunAnimation"
+import GatsbyStars from "../animation/GatsbyStars"
 
 const Aboutme = () => {
   const { skills, stats, tools } = aboutMe
+  const { theme } = useTheme()
   const barsRef = useRef(null)
 
   useEffect(() => {
@@ -25,7 +30,17 @@ const Aboutme = () => {
   }, [])
 
   return (
-    <div className='inner aboutme-inner' ref={barsRef}>
+    <>
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, opacity: 0.7, pointerEvents: 'none' }}>
+        <Canvas camera={{ position: [0, 0, 5], fov: 65 }}>
+          <ambientLight intensity={0.7} />
+          <pointLight position={[10, 10, 10]} intensity={1.5} />
+          {theme === 'dark' && <GatsbyStars />}
+          {theme === 'light' && <SunAnimation />}
+        </Canvas>
+      </div>
+
+      <div className='inner aboutme-inner' ref={barsRef} style={{ position: 'relative', zIndex: 1 }}>
       <div className="section-header">
         <div className="section-label">MY SKILLS</div>
         <h2 className="about-title">
@@ -107,7 +122,8 @@ const Aboutme = () => {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

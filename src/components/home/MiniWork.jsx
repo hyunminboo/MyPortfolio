@@ -1,10 +1,26 @@
 import React from 'react'
 import { miniWorks } from '../../utils/works'
 import "./styles/MiniWork.scss"
+import { Canvas } from "@react-three/fiber"
+import { useTheme } from "../../context/ThemeContext"
+import SunAnimation from "../animation/SunAnimation"
+import GatsbyStars from "../animation/GatsbyStars"
 
 const MiniWork = () => {
+  const { theme } = useTheme();
+
   return (
-    <div className='inner miniwork-inner'>
+    <>
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, opacity: 0.7, pointerEvents: 'none' }}>
+        <Canvas camera={{ position: [0, 0, 5], fov: 65 }}>
+          <ambientLight intensity={0.7} />
+          <pointLight position={[10, 10, 10]} intensity={1.5} />
+          {theme === 'dark' && <GatsbyStars />}
+          {theme === 'light' && <SunAnimation />}
+        </Canvas>
+      </div>
+
+      <div className='inner miniwork-inner' style={{ position: 'relative', zIndex: 1 }}>
       <div className="miniwork-layout">
         <div className="miniwork-grid">
           {miniWorks.map(work => (
@@ -64,7 +80,8 @@ const MiniWork = () => {
           <button className="btn-primary">미니 프로젝트 보러가기</button>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

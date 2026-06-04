@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import "./styles/Aboutintro.scss";
+import { Canvas } from "@react-three/fiber";
+import { useTheme } from "../../context/ThemeContext";
+import SunAnimation from "../animation/SunAnimation";
+import GatsbyStars from "../animation/GatsbyStars";
 
 const cards = [
   {
@@ -18,6 +22,7 @@ const cards = [
 
 const AboutIntro = () => {
   const sectionRef = useRef(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,7 +46,17 @@ const AboutIntro = () => {
   }, []);
 
   return (
-    <div className="inner aboutintro-inner" ref={sectionRef}>
+    <>
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, opacity: 0.7, pointerEvents: 'none' }}>
+        <Canvas camera={{ position: [0, 0, 5], fov: 65 }}>
+          <ambientLight intensity={0.7} />
+          <pointLight position={[10, 10, 10]} intensity={1.5} />
+          {theme === 'dark' && <GatsbyStars />}
+          {theme === 'light' && <SunAnimation />}
+        </Canvas>
+      </div>
+
+      <div className="inner aboutintro-inner" ref={sectionRef} style={{ position: 'relative', zIndex: 1 }}>
       <div className="ai-header">
         <span className="section-label">ABOUT ME</span>
         <h2 className="ai-title">저에 대해서</h2>
@@ -70,7 +85,8 @@ const AboutIntro = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
