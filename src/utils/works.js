@@ -2,6 +2,14 @@ const img = (path) => `/img/${path}`;
 
 export const miniWorks = [
   {
+    id: "m-005",
+    icon: img("mini-api.png"),
+    title: "파이썬 미니 프로젝트",
+    description: "파이썬을 활용한 미니 프로젝트입니다.",
+    tags: ["Python"],
+    links: { notion: "https://app.notion.com/p/372e37e5595f80f090d9c06a6e52da82?source=copy_link" },
+  },
+  {
     id: "m-001",
     icon: img("mini-todo.png"),
     title: "투두리스트 미니 프로젝트",
@@ -33,14 +41,6 @@ export const miniWorks = [
     tags: ["React", "API"],
     links: { github: "#", demo: "#" },
   },
-  {
-    id: "m-005",
-    icon: img("mini-api.png"),
-    title: "파이썬 미니 프로젝트",
-    description: "파이썬을 활용한 미니 프로젝트입니다.",
-    tags: ["Python"],
-    links: { notion: "https://app.notion.com/p/372e37e5595f80f090d9c06a6e52da82?source=copy_link" },
-  },
 ];
 
 const works = [
@@ -48,18 +48,18 @@ const works = [
     id: "w-003",
     title: "Trip archive",
     description: "react와 springboot기반 여행 아카이브 사이트입니다. 사용자가 여행지를 등록하고 사진을 업로드할 수 있습니다.",
-    tags: ["React", "Springboot"],
+    tags: ["React", "Spring Boot", "MySQL", "AWS S3", "Docker"],
     thumbnail: img("p-1.png"), 
     links: { notion: "https://app.notion.com/p/fullstack-32fe37e5595f80dc8a7bd31380f65460?source=copy_link", demo: "https://triparchive.o-r.kr/" },
   },
   {
     id: "w-001",
-    title: "포트폴리오 웹사이트",
+    title: "NexusHub (팀 프로젝트)",
     description:
       "React + Vite 기반의 개인 포트폴리오. 다크/라이트 테마, 반응형, 관리자 페이지까지 직접 구현한 풀스택 프로젝트입니다.",
-    tags: ["React", "SCSS", "Node.js", "MongoDB"],
-    thumbnail: img("p-2.png"),
-    links: { notion: "#", demo: "#" },
+    tags: ["React", "TypeScript", "SCSS", "Vite"],
+    thumbnail: img("nexus-hub.jpg"),
+    links: { notion: "https://app.notion.com/p/397e37e5595f80ba9793fb6ad4b52a9b?source=copy_link", demo: "https://team-project-nexus-hub.vercel.app/" },
     year: "2024",
   },
   {
