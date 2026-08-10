@@ -37,7 +37,6 @@ const Hero = () => {
 
         <p className="hero-sub">안녕하세요, 저는</p>
         <h1 className="tit">
-          <span className="en">Full-Stack</span>
           <span className="en green">Developer</span>
           <span className="ko">부현민 입니다.</span>
         </h1>
