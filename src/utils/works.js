@@ -45,6 +45,16 @@ export const miniWorks = [
 
 const works = [
   {
+    id: "w-002",
+    title: "TSM · 학교 인사관리 시스템",
+    description:
+      "근태·급여·인사발령까지, 파편화된 교무 업무를 하나로 통합하는 학교 특화 인사관리 시스템입니다. Next.js 기반 프론트엔드와 Spring Boot 백엔드로 구축했습니다.",
+    tags: ["Next.js", "TypeScript", "Spring Boot", "MySQL", "Docker"],
+    thumbnail: img("tsm-landing.png"),
+    links: { notion: "https://app.notion.com/p/SmartRAD-part-3b2e37e5595f80bcbc95d3c3943f3899?source=copy_link", demo: "https://tsms.o-r.kr/" },
+    year: "2025",
+  },
+  {
     id: "w-003",
     title: "Trip archive",
     description: "react와 springboot기반 여행 아카이브 사이트입니다. 사용자가 여행지를 등록하고 사진을 업로드할 수 있습니다.",
@@ -60,16 +70,6 @@ const works = [
     tags: ["React", "TypeScript", "SCSS", "Vite"],
     thumbnail: img("nexus-hub.jpg"),
     links: { notion: "https://app.notion.com/p/397e37e5595f80ba9793fb6ad4b52a9b?source=copy_link", demo: "https://team-project-nexus-hub.vercel.app/" },
-    year: "2024",
-  },
-  {
-    id: "w-002",
-    title: "팀 협업 프로젝트",
-    description:
-      "팀원들과 함께 기획·개발한 웹 서비스. Figma로 디자인 협업, GitHub Flow로 브랜치 전략을 적용했습니다.",
-    tags: ["React", "Express", "MySQL"],
-    thumbnail: img("p-3.png"),
-    links: { notion: "#", demo: "#" },
     year: "2024",
   },
 
