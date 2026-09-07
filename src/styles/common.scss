@@ -9,6 +9,11 @@ section {
     height: auto;
   }
 
+  &#Roadmap {
+    height: auto;
+    min-height: auto;
+  }
+
   &#Contact {
     height: 100vh;
     @media screen and (max-width: 1200px) {

@@ -8,6 +8,7 @@ import Contact from "../components/home/Contact";
 import Footer from "../components/home/Footer";
 import FixedTop from "../components/home/FixedTop";
 import Aboutintro from "../components/home/Aboutintro";
+import Roadmap from "../components/home/Roadmap";
 
 const Home = () => {
   return (
@@ -16,6 +17,9 @@ const Home = () => {
       <main>
         <section id="Hero">
           <Hero />
+        </section>
+        <section id="Roadmap">
+          <Roadmap />
         </section>
         <section id="AboutIntro">
           <Aboutintro />
