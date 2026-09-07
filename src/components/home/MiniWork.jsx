@@ -30,13 +30,6 @@ const MiniWork = () => {
             <div 
               className="mini-card" 
               key={work.id}
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                const targetLink = work.links.notion || work.links.demo || work.links.github;
-                if (targetLink && targetLink !== "#") {
-                  window.open(targetLink, "_blank");
-                }
-              }}
             >
               <img src={work.icon} alt={work.title} className="mini-icon" />
               <h4 className="mini-title">{work.title}</h4>

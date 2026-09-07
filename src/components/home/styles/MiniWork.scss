@@ -39,11 +39,7 @@
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative; // ← 추가
 
-    &:hover {
-      border-color: var(--primary);
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px color-mix(in srgb, var(--primary) 15%, transparent);
-    }
+
 
     .mini-icon {
       width: 8rem;

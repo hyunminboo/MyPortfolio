@@ -46,7 +46,7 @@ export const miniWorks = [
 const works = [
   {
     id: "w-002",
-    title: "TSM · 학교 인사관리 시스템",
+    title: "TSM · 학교 인사관리 시스템 (팀프로젝트)",
     description:
       "근태·급여·인사발령까지, 파편화된 교무 업무를 하나로 통합하는 학교 특화 인사관리 시스템입니다. Next.js 기반 프론트엔드와 Spring Boot 백엔드로 구축했습니다.",
     tags: ["Next.js", "TypeScript", "Spring Boot", "MySQL", "Docker"],

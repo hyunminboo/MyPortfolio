@@ -3,9 +3,11 @@ import useSmoothScroll from '../../hook/useSmoothScroll'
 
 const navLinks = [
   { id: 'Hero', label: '소개' },
+  { id: 'Roadmap', label: '로드맵' },
   { id: 'Aboutme', label: '기술' },
-  { id: 'MiniWork', label: '프로젝트' },
-  { id: 'Work', label: '연락' },
+  { id: 'MiniWork', label: '미니 프로젝트' },
+  { id: 'Work', label: '프로젝트' },
+  { id: 'Contact', label: '연락' },
 ]
 
 const Nav = ({ closeMenu }) => {
