@@ -15,7 +15,9 @@
     align-items: start;
 
     @media screen and (max-width: 1024px) {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 4rem;
     }
   }
 
