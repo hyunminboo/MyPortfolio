@@ -140,6 +140,37 @@ const works = [
         desc: "사용자의 기기(모바일/데스크톱)를 감지하여 파티클 개수와 그림자 해상도를 동적으로 조절하고, 화면 밖으로 벗어난 컴포넌트는 렌더링 루프에서 제외하는 최적화를 진행했습니다."
       }
     ]
+  },
+  {
+    id: "w-004",
+    title: "Unity Web Game",
+    description: "Unity 엔진을 활용하여 개발하고 WebGL로 빌드하여 Vercel에 배포한 웹 기반 게임 프로젝트입니다.",
+    tags: ["Unity", "C#", "WebGL", "Vercel"],
+    thumbnail: img("unity-game.png"),
+    links: { github: "#", notion: "#", demo: "https://hyunmin-game.vercel.app/" },
+    period: "진행 기간 (수정 필요)",
+    team: "1인 프로젝트 (개인 프로젝트)",
+    myRole: "게임 기획 및 개발 전체",
+    features: [
+      {
+        title: "웹 브라우저 기반 게임 플레이",
+        desc: "Unity WebGL 빌드를 통해 별도의 클라이언트 설치 없이 브라우저 환경에서 즉시 플레이가 가능하도록 구현했습니다."
+      },
+      {
+        title: "Vercel을 통한 호스팅",
+        desc: "빌드된 WebGL 정적 리소스들을 Vercel을 통해 빠르고 안정적으로 배포하여 사용자 접근성을 높였습니다."
+      }
+    ],
+    troubleshooting: [
+      {
+        title: "문제: WebGL 빌드 용량 최적화",
+        desc: "초기 빌드 시 용량이 커서 웹에서 초기 로딩 시간이 길어지는 문제가 발생했습니다."
+      },
+      {
+        title: "해결: 리소스 압축 및 최적화",
+        desc: "에셋 번들 최적화 및 텍스처 압축을 통해 빌드 사이즈를 줄이고 로딩 속도를 개선했습니다. (예시 내용이므로 실제 경험에 맞게 수정해주세요.)"
+      }
+    ]
   }
 ];
 
