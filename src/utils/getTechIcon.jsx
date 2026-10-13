@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaReact, FaNodeJs, FaSass, FaPython, FaDocker, FaGithub, FaAws, FaVuejs, FaFigma, FaGitAlt, FaServer, FaJava } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaSass, FaPython, FaDocker, FaGithub, FaAws, FaVuejs, FaFigma, FaGitAlt, FaServer, FaJava, FaLinux } from 'react-icons/fa';
 import { SiTypescript, SiJavascript, SiMongodb, SiMysql, SiOracle, SiSpringboot, SiPostman, SiInsomnia, SiNotion, SiThreedotjs, SiNextdotjs, SiUnity, SiWebgl, SiVercel } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import { TbBrandCSharp } from 'react-icons/tb';
@@ -19,6 +19,7 @@ export const getTechIcon = (name) => {
   if (n.includes('scss') || n.includes('sass') || n.includes('tailwind')) return <FaSass />;
   if (n.includes('python')) return <FaPython />;
   if (n.includes('docker')) return <FaDocker />;
+  if (n.includes('linux') || n.includes('리눅스') || n.includes('ubuntu')) return <FaLinux />;
   if (n === 'git' || n.includes('github')) return <FaGithub />;
   if (n.includes('aws')) return <FaAws />;
   if (n.includes('vue')) return <FaVuejs />;

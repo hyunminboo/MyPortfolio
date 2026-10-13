@@ -22,12 +22,13 @@ const aboutMe = {
     ],
     devops: [
       { name: "Git / GitHub", level: 88 },
+      { name: "Linux", level: 75 },
       { name: "Docker", level: 60 },
       { name: "AWS / Cloudtype", level: 65 },
       { name: "IWIN Server / Domain", level: 58 },
     ],
   },
-  tools: ["Git", "Figma", "VS Code", "Postman", "Docker", "Notion"],
+  tools: ["Git", "Linux", "Figma", "VS Code", "Postman", "Docker", "Notion"],
   stats: [
     { value: "3+", label: "Years Experience" },
     { value: "20+", label: "Projects done" },
