@@ -80,13 +80,13 @@ const works = [
   {
     id: "w-003",
     title: "Trip archive",
-    description: "react와 springboot기반 여행 아카이브 사이트입니다. 사용자가 여행지를 등록하고 사진을 업로드할 수 있습니다.",
-    tags: ["React", "Spring Boot", "MySQL", "AWS S3", "Docker"],
+    description: "React와 Spring Boot 기반의 여행 아카이브 플랫폼입니다. 가상 서버에 리눅스 OS를 직접 설치하고 인프라를 구축하여 안정적인 무중단 배포 환경을 완성했습니다.",
+    tags: ["React", "Spring Boot", "MySQL", "AWS S3", "Docker", "Linux"],
     thumbnail: img("p-1.png"), 
     links: { notion: "https://app.notion.com/p/fullstack-32fe37e5595f80dc8a7bd31380f65460?source=copy_link", demo: "https://triparchive.o-r.kr/" },
     period: "2024.08 - 2024.10 (약 2개월)",
     team: "1인 프로젝트 (개인 프로젝트)",
-    myRole: "풀스택 전담 / 프론트엔드 및 백엔드 전 과정 기획·설계·개발",
+    myRole: "풀스택 개발 및 서버 인프라 구축 / 프론트엔드 및 백엔드 전 과정 기획·설계·개발, 리눅스 서버 설치 및 무중단 배포 전담",
     features: [
       {
         title: "RESTful API 설계 및 백엔드 구축",
@@ -95,6 +95,10 @@ const works = [
       {
         title: "프론트엔드 UI/UX 및 클라우드 연동",
         desc: "React를 이용해 인터랙티브 지도(Kakao/Google) 뷰어와 커스텀 오버레이를 구현하고, AWS S3를 통해 원활한 다중 이미지 업로드 환경을 구축했습니다."
+      },
+      {
+        title: "리눅스 기반 서버 인프라 구축 및 무중단 배포",
+        desc: "가상 서버에 Ubuntu 리눅스 OS를 직접 설치하고 UFW 방화벽 정책 수립, systemd 데몬 등록을 통해 백그라운드 프로세스를 안정화했습니다. Docker 및 Nginx 리버스 프록시를 연동하여 SSL 보안 인증서가 적용된 무중단 서비스 환경을 구축했습니다."
       }
     ],
     troubleshooting: [
@@ -105,6 +109,14 @@ const works = [
       {
         title: "해결: Presigned URL 및 클라이언트 리사이징",
         desc: "브라우저 단(Canvas API)에서 1차 리사이징 후, 서버를 거치지 않고 Spring Boot에서 발급한 S3 Presigned URL을 통해 클라이언트에서 직접 업로드하도록 아키텍처를 개선하여 서버 부하를 0으로 만들고 업로드 속도를 대폭 향상시켰습니다."
+      },
+      {
+        title: "문제: 웹 서버 연동 실패 및 포트 충돌로 인한 서비스 중단",
+        desc: "배포 과정에서 Nginx 웹 서버 연동 실패와 포트 충돌, 권한 오류가 발생하여 서비스가 중단되는 문제가 발생했습니다."
+      },
+      {
+        title: "해결: 시스템 로그 교차 분석 및 포트·방화벽 설정 최적화",
+        desc: "단편적인 해결에 그치지 않고 journalctl과 시스템 로그를 집요하게 분석하여 설정 오류를 바로잡았습니다. 방화벽 보안 규칙을 재정의하고 프로세스 통신 경로를 최적화하여 단 한 번의 단절 없는 안정적인 서버 환경을 완성했습니다."
       }
     ]
   },
