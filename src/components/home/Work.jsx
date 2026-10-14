@@ -182,7 +182,7 @@ const Work = () => {
                 {/* Troubleshooting Section */}
                 {selectedWork.troubleshooting && selectedWork.troubleshooting.length > 0 && (
                   <div className="detail-section">
-                    <h3 className="section-title">트러블슈팅 및 문제 해결</h3>
+                    <h3 className="section-title">문제 분석 및 해결 과정</h3>
                     <div className="trouble-list">
                       {selectedWork.troubleshooting.map((issue, idx) => (
                         <div key={idx} className="trouble-item">
