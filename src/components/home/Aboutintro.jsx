@@ -7,7 +7,7 @@ import GatsbyStars from "../animation/GatsbyStars";
 
 const cards = [
   {
-    title: "프론트엔드 · 백엔드 · 리눅스",
+    title: "기술",
     desc: "사용자 중심의 프론트엔드와 안정적인 백엔드 개발뿐만 아니라, 리눅스 OS 기반 서버 인프라 구축, Nginx 웹 서버 환경 설정, SSL 보안 인증서 적용 및 데이터베이스 운영까지 서비스 전반을 직접 구축하고 관리할 수 있습니다.",
   },
   {
